@@ -34,7 +34,6 @@ C:\scripts>tif_to_tif_lzw_256tiled.bat c:\inputfolder c:\outputfolder
 ### Scripts
 `jp2_to_tif_lzw_256tiled.bat` - .jp2 files to LZW compressed tiled (tile size is 256x256 pixels) TIFFs  
 `jpg_to_tif_lzw_256tiled.bat` - .jpg files to LZW compressed tiled (tile size is 256x256 pixels) TIFFs  
-`jpg_to_tif_resizeParameter_lzw_256tiled.bat` - .jpg to LZW compressed tiled (tile size is 256x256 pixels) resized TIFFs  
 `png_to_png_truecolor8bit.bat` - .png files to RGB (no transparency) PNGs  
 `png_to_tif_lzw.bat` - .png to LZW compressed untiled TIFFs  
 `tif_to_png.bat` - .tif to PNGs  
@@ -44,12 +43,26 @@ C:\scripts>tif_to_tif_lzw_256tiled.bat c:\inputfolder c:\outputfolder
 `tif_to_tif_lzw_256tiled.bat` - .tif to LZW compressed tiled (tile size is 256x256 pixels) TIFFs  
 `tif_to_tif_lzw_256tiled_spaces_in_filenames.bat` - .tif to LZW compressed tiled (tile size is 256x256 pixels) TIFFs, should tolerate spaces in filenames  
 `tif_to_tif_normalized_lzw_256tiled.bat` - .tif to LZW compressed tiled (tile size is 256x256 pixels) normalized TIFFs
-`tif_to_tif_resizeParameter.bat` - .tif to resized TIFFs  
 `tif_to_tif_truecolor8bit_lzw_256tiled.bat` - .tif to LZW compressed tiled (tile size is 256x256 pixels) RGB (no transparency) TIFFs
 `tif_to_tif_truecolor8bit_normalized_lzw_256tiled.bat` - .tif to LZW compressed tiled (tile size is 256x256 pixels) RGB (no transparency) normalized TIFFs
 `tif_to_tif_uncompressed_256tiled.bat` - .tif to uncompressed tiled (tile size is 256x256 pixels) TIFFs  
-
 ### Helper tool
-ImageMagickGUI.exe
+For those who hate CMD and command line there is `mageMagickGUI.exe` tool. The scripts functionality wrapped into user friendly graphical application.
+## Resize scripts
+The scripts below has one extra parameter - resize percentage
+```
+script_name.bat resize_percentage inputfolder outputfolder
+```
+`jpg_to_tif_resizeParameter_lzw_256tiled.bat` - .jpg to LZW compressed tiled (tile size is 256x256 pixels) resized TIFFs  
+`tif_to_tif_resizeParameter.bat` - .tif to resized TIFFs  
+## Single folder scripts
+The scripts below accept only one parameter - the folder:
+```
+script_name.bat thefolder
+```
 ### Validadtor
+`tif_validator.bat` - reads out TIFFs parameters trying to detect corrupted files. Launches notepad with the scan results.
 ### Replace spaces and minuses in filenames
+`replace_minuses_with_underscores.bat` - replaces minuses in file names with underscores  
+`replace_spaces_with_underscores.bat` - replaces spaces in file names with underscores  
+
